@@ -3,8 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	// var card string = "GoGoGo Fast"
-	card := "GoGoGo Fast"
-	card = "GoGoGo Super Fast"
-	fmt.Println(card)
+	cards := []string{newcard(), newcard()}
+	cards = append(cards, "HAHAHAHAHA")
+	for i := 0; i < 3; i++ {
+		fmt.Println(cards[i])
+	}
+
+	for _, card := range cards {
+		fmt.Println(card)
+	}
+}
+
+func newcard() string {
+	return "Trible fast"
 }
