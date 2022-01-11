@@ -35,6 +35,14 @@ func main() {
 	}
 	jim.updatename("Jimmy")
 	jim.print()
+	name := "bill"
+	namePointer := &name
+	fmt.Println(&namePointer)
+	printPointer(namePointer)
+}
+
+func printPointer(namePointer *string) {
+	fmt.Println(&namePointer)
 }
 
 func (p *person) updatename(newfirstname string) {
