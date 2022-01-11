@@ -35,7 +35,6 @@ func main() {
 	}
 	jim.updatename("Jimmy")
 	jim.print()
-
 }
 
 func (p *person) updatename(newfirstname string) {
