@@ -33,8 +33,13 @@ func main() {
 			zipcode: 9400,
 		},
 	}
+	jim.updatename("Jimmy")
 	jim.print()
 
+}
+
+func (p *person) updatename(newfirstname string) {
+	p.firstname = newfirstname
 }
 
 func (p person) print() {
