@@ -1,54 +1,19 @@
 package main
 
-import "fmt"
-
-type contactinfo struct {
-	email   string
-	zipcode int
-}
-
-type person struct {
-	firstname string
-	lastname  string
-	contactinfo
-}
+import (
+	"fmt"
+)
 
 func main() {
-	//alex := person{firstname: "Alex", lastname: "Anderson"}
-	//fmt.Println(alex)
+	colors := make(map[int]string)
+	// var colors map[string]string
 	/*
-		var alex person
-		alex.firstname = "Alex"
-		alex.lastname = "Anderson"
-		alex.contact.email = "me@alex.com"
-		alex.contact.zipcode = 77777
-		fmt.Println(alex)
-		fmt.Printf("%+v", alex)
+		colors := map[string]string{
+			"red":   "#ff000",
+			"green": "#4bf745",
+		}
 	*/
-	jim := person{
-		firstname: "Jim",
-		lastname:  "Party",
-		contactinfo: contactinfo{
-			email:   "jim@gamil.com",
-			zipcode: 9400,
-		},
-	}
-	jim.updatename("Jimmy")
-	jim.print()
-	name := "bill"
-	namePointer := &name
-	fmt.Println(&namePointer)
-	printPointer(namePointer)
-}
-
-func printPointer(namePointer *string) {
-	fmt.Println(&namePointer)
-}
-
-func (p *person) updatename(newfirstname string) {
-	p.firstname = newfirstname
-}
-
-func (p person) print() {
-	fmt.Println(p)
+	colors[10] = "#fffff"
+	delete(colors, 10)
+	fmt.Println(colors)
 }
