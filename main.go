@@ -20,6 +20,13 @@ func main() {
 		go checklink(l, c)
 	}
 	fmt.Println(<-c)
+	fmt.Println(<-c)
+	fmt.Println(<-c)
+	fmt.Println(<-c)
+	fmt.Println(<-c)
+	fmt.Println(<-c)
+
+	fmt.Println(<-c)
 }
 
 func checklink(link string, c chan string) {
